@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: PetroleumAccountability
+
+  datasource:
+    url: jdbc:postgresql://localhost:5436/petroacct
+    driver-class-name: org.postgresql.Driver
+    username: petro_dev
+    password: petro_dev
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080

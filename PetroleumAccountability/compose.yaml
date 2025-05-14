@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  postgres-db:
+    container_name: PetroleumAccountability
+    image: postgres # use latest official postgres version
+    restart: always
+    environment:
+      POSTGRES_USER: petro_dev
+      POSTGRES_PASSWORD: petro_dev
+      POSTGRES_DB: PetroleumAccountability
+      POSTGRES_HOST_AUTH_METHOD: password
+    ports:
+      - "5438:5432"
+
+volumes:
+  postgresql_data:
+    driver: local
